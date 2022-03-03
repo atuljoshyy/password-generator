@@ -7,6 +7,13 @@ const numbersEl = document.getElementById('numbers');
 const symbolsEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
 const clipboardEl = document.getElementById('clipboard');
+const successMsgEl = document.getElementById('success-msg-container');
+const containerEl = document.getElementById('container');
+const bodyEl = document.querySelector('body');
+const themeToggleBtn = document.getElementById('theme-toggle');
+const resultContainerEl = document.querySelector('.result-container')
+
+
 
 generateEl.addEventListener('click', () => {
     const length = parseInt(lengthEl.value)
@@ -29,7 +36,30 @@ clipboardEl.addEventListener('click', () => {
     textarea.select();
     document.execCommand('copy');
     textarea.remove();
+    window.setTimeout(function () {
+        successMsgEl.classList.remove('visible');
+         
+    }, 1200);
 
+    successMsgEl.classList.add('visible');
+
+})
+
+themeToggleBtn.addEventListener('click', () => {
+    bodyEl.classList.toggle('dark-body')
+    containerEl.classList.toggle('dark-container')
+    lengthEl.classList.toggle('dark-length-input')
+    resultContainerEl.classList.toggle('dark-result-container')
+    clipboardEl.classList.toggle('dark-btn')
+    uppercaseEl.classList.toggle('dark-switch-input')
+    generateEl.classList.toggle('dark-btn')
+    // successMsgEl.classList.toggle('dark-success-msg')
+
+    if (themeToggleBtn.checked) {
+        console.log('dark mode activated');
+    } else {
+        console.log('light mode activated');
+    }
 })
 
 function generatePassword(lower, upper, number, symbol, length) {

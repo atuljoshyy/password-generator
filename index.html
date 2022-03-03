@@ -8,41 +8,64 @@
   <script src="https://kit.fontawesome.com/3da1a747b2.js" crossorigin='anonymous'></script>
   <title>Document</title>
 </head>
-<body>
-  <!-- INSERT HTML HERE -->
-<div class="container">
+<body class="">
+	<div class="theme-toggle-container">
+		<div class="switch">
+			<input type="checkbox" id="theme-toggle" class="switch-input theme-switch-input" />
+			<label for="theme-toggle" class="switch-label theme-switch-label"></label>
+		  </div>
+	</div>
+	
+<div class="container " id="container">
 	<h2>Password Generator</h2>
-	<div class="result-container">
+	<div class="result-container ">
 		<span id="result"></span>
-		<button class="btn" id="clipboard">
+		<button class="btn copy " id="clipboard">
 			<i class="far fa-clipboard"></i>
 		</button>
 	</div>
 	<div class="settings">
 		<div class="setting">
 			<label>Password length</label>
-			<input type="number" id="length" min='4' max='20' value='8' />
+			<input type="number" id="length" min='4' max='20' value='15' class="length-input " />
 		</div>
 		<div class="setting">
-			<label>Include uppercase letters</label> 
-			<input type="checkbox" id="uppercase" checked />
+			<p>include uppercase letters</p>
+			<div class="switch">
+				<input type="checkbox" id="uppercase" checked class="switch-input " />
+				<label for="uppercase" class="switch-label"></label>
+			  </div>
 		</div>
 		<div class="setting">
-			<label>Include lowercase letters</label> 
-			<input type="checkbox" id="lowercase" checked />
+			<p>Include lowercase letters</p>
+			<div class="switch">
+				<input type="checkbox" id="lowercase"checked class="switch-input"/>
+				<label for="lowercase" class="switch-label"></label>
+			  </div>
 		</div>
 		<div class="setting">
-			<label>Include numbers</label> 
-			<input type="checkbox" id="numbers" checked />
+			<p>Include numbers</p>
+			<div class="switch">
+				<input type="checkbox" id="numbers"checked class="switch-input"/>
+				<label for="numbers" class="switch-label"></label>
+			  </div>
 		</div>
 		<div class="setting">
-			<label>Include symbols</label> 
-			<input type="checkbox" id="symbols" checked />
+			<p>Include symbols</p>
+			<div class="switch">
+				<input type="checkbox" id="symbols"checked class="switch-input"/>
+				<label for="symbols" class="switch-label"></label>
+			  </div>
 		</div>
 	</div>
-	<button class="btn btn-large" id="generate">
-		Generate password
+	<button class="btn btn-large " id="generate">
+		Generate
 	</button>
+</div>
+<div class="success-msg-container hidden" id="success-msg-container">
+	<div class="success-msg">
+		copied to clipboard ✅
+	</div>
 </div>
 
 <script src="/main.js"></script>
