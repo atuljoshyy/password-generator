@@ -129,13 +129,11 @@ input[type="number"] {
   align-items: center;
   margin: 15px 0;
 }
-
 @media screen and (max-width: 400px) {
   .result-container {
     font-size: 14px;
   }
 }
-
 .switch {
   position: relative;
   display: inline-block;
@@ -199,7 +197,6 @@ input[type="number"] {
 .switch-input:checked + .switch-label::after {
   left: 24px;
 }
-
 .success-msg-container {
   transition: 400ms;
   position: absolute;
@@ -217,7 +214,6 @@ input[type="number"] {
   background: #181818;
   transition: 300ms ease-in-out;
 }
-
 .hidden {
   display: none;
 }
@@ -229,12 +225,10 @@ input[type="number"] {
 .fade {
   animation: fading 1s forwards;
 }
-
 .blur {
   filter: blur(10px);
   filter: opacity(10%);
 }
-
 .theme-toggle-container {
   position: absolute;
   top: 50px;

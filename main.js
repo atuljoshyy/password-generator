@@ -38,7 +38,7 @@ clipboardEl.addEventListener('click', () => {
     textarea.remove();
     window.setTimeout(function () {
         successMsgEl.classList.remove('visible');
-         
+
     }, 1200);
 
     successMsgEl.classList.add('visible');
